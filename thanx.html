@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+  button {
+    display: none;
+  }
+  a,
+  a:visited {
+    color: var(--brun);
+    text-decoration: none;
+  }
+  </style>
+</head>
+<body>
+  <header>
+  <h1> <a href="intro.html"> Tak for din bestilling! <br> Maden kommer straks </a> </h1>
+
+  </header>
+  <main>
+  <div class="emerald">Bord  <span id="tblNo"></span></div>
+  <div id="showOrder" class="emerald2"></div>
+  </main>
+
+
+  <footer>
+    &copy; Alices restaurant 2022
+  </footer>
+  <script>
+    // date
+    d = new Date()
+
+    // random table number
+    tblNo.innerHTML = Math.floor(Math.random()*15) + 1
+
+    // the order receipt
+    showOrder.innerHTML = d + '<br>' + sessionStorage.getItem("yourOrders")
+  </script>
+
+</body>
+</html>
